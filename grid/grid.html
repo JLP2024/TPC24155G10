@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <link rel="stylesheet" href="grid.css" />
+    <link
+      rel="stylesheet"
+      media="(prefers-color-scheme:light)"
+      href="light.css"
+    />
+    
+    <link
+      rel="stylesheet"
+      media="(prefers-color-scheme:dark)"
+      href="dark.css"
+    />
+    <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
+    
+  </head>
+  <body class="grid-container">
+    <header class="header">HEADER
+      <dark-mode-toggle
+      id="dark-mode-toggle-1"
+      legend="Theme Switcher"
+      appearance="switch"
+      dark="Dark"
+      light="Light"
+      remember="Activar modo en todas las paginas"
+    ></dark-mode-toggle>
+    </header>
+    <nav class="navbar">NAVBAR
+      <ul>
+        <li><a href="#">Pag1</a></li>
+        <li><a href="#">Pag2</a></li>
+        <li><a href="#">Pag3</a></li>
+        <li><a href="#">Pag4</a></li>
+        <li><a href="#">Pag5</a></li>
+        <li><a href="#">Pag6</a></li>
+      </ul>
+    </nav>
+    <aside class="sidebar">
+      <!-- SIDEBAR -->
+      <img src="../gif/banner2.gif" alt="" />
+      <img src="../gif/banner1.gif" alt="" />
+      <p>SIDEBAR</p>
+    </aside>
+    <article class="main">
+      <form action="https://formspree.io/f/mvoedben" target=""  enctype="multipart/form-data" method="POST" name="formDatosPersonales">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+      
+        <label for="apellidos">Apellido</label>
+        <input type="text" name="apellidos" id="apellidos" placeholder=" Apellido"/>
+      
+        <label for="email" />Email</label>
+        <input type="email" name="email" id="email" placeholder="email"  />
+
+        <label for="masculino" >Masculino</label>
+        <input type="radio" name="sexo" id="masculino"/>
+
+        <label for="femenino" >Femenino</label>
+        <input type="radio" name="sexo" id="femenino"/>
+      
+        <label for="asunto">Asunto</label>
+        <input type ="text" name="asunto" id="asunto" placeholder="Tu consulta"/>
+      
+        <label for="mensaje">Mensaje</label>
+        <textarea name="mensaje" for="mensaje" placeholder="describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+
+        <input type="file" name="archivo" id="archivo">
+
+        <label for="check1" >Suscribirme</label>
+        <input type="checkbox" name="check1" id="check1"/>
+
+        
+
+        
+        <input type="submit" name="enviar" value="Enviar datos"/>
+        <input type="reset" name="borrar" value="Borrar Datos">
+      </form>
+      <div class="flex-container">
+        <div class="flex-box">
+          <h1><p class="centrado">COMO LLEGAR...🏃‍♂️</p></h1>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.9958185142686!2d-58.44575682485435!3d-34.62954595886178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca36866ca4b9%3A0xf3181e2c66910c9c!2sParque%20Chacabuco%2C%20Av.%20Directorio%201110%2C%20C1406GZN%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1713964998641!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </article>
+    <footer class="footer">
+      FOOTER
+      <img class="tamaño50" src="../gif/medios.gif">
+            <img class="tamaño50" src="../gif/telefono.gif">
+            <img class="tamaño50" src="../gif/cuaderno.gif">
+            
+            <img class="tamaño50" src="../gif/hacer-clic.gif">
+           
+            <img class="tamaño50" src="../gif/mensaje.gif">
+            <img class="tamaño50" src="../gif/perfil.gif">
+            <img class="tamaño50" src="../gif/hogar.gif">
+           
+    </footer>
+  </body>
+</html>
