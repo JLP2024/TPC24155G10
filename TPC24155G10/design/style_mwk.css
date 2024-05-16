@@ -31,5 +31,5 @@ color: #0b4264;
   }
   
   .banner-img:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen al pasar el cursor */
+    transform: scale(1.3); /* Aumenta ligeramente el tamaño de la imagen al pasar el cursor */
   }
