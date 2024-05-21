@@ -1,0 +1,11 @@
+:root{
+    --background-color: black;
+
+}
+body{
+    color:whitesmoke
+}
+form{
+    background-color: rgb(61, 57, 57);
+    color: antiquewhite;
+}

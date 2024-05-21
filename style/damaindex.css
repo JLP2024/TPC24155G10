@@ -1,0 +1,56 @@
+body{
+   /*-----------Patron de Fondo------------*/
+   font-family: "Advent Pro", sans-serif;
+   background:
+   radial-gradient(#727173 3px, transparent 4px),
+   radial-gradient(#727173 3px, transparent 4px),
+   linear-gradient(#a09ea1 4px, transparent 0),
+   linear-gradient(45deg, transparent 74px, transparent 75px, #727173 75px, #727173 76px, transparent 77px, transparent 109px),
+   linear-gradient(-45deg, transparent 75px, transparent 76px, #727173 76px, #727173 77px, transparent 78px, transparent 109px),
+   #a09ea1;
+   background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+/* Productos home*/
+
+#productos-container{
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+justify-content: center;}
+
+.tarjeta-producto{
+  background-color: var(--color-acento-claro);
+  text-align: center;
+  padding: 10px;
+  max-width: 400px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: 200ms;
+}
+
+.tarjeta-producto:hover{
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  translate: 0px -5px;
+}
+
+.tarjeta-producto img{
+  max-width:100%;
+  aspect-ratio: 1.5;
+}
+
+.precio{
+  font-weight: 600;
+}
+
+.tarjeta-producto button{
+  font-size: larger;
+  background-color: var(--color-acento);
+  border-radius: 5px;
+  padding: 3px 5px;
+  color: white;
+  border:unset;
+  cursor:pointer;
+}
