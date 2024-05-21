@@ -27,7 +27,7 @@ function agregarMenu(){
             <li class="navbar-item flexbox-left"><a class="navbar-item-inner flexbox link-texta"
                     href="grid.html">Hombres</a></li>
             <li class="navbar-item flexbox-left"><a class="navbar-item-inner flexbox link-texta"
-                    href="damaindex.html">damas</a>
+                    href="damaindex.html">Damas</a>
             </li>
             <li class="navbar-item flexbox-left"><a class="navbar-item-inner flexbox link-texta"
                     href="#">Niños</a>
