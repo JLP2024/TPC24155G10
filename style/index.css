@@ -143,6 +143,8 @@ body {
 }
 
 .modal-body{
+    font-family: "Poppins";
+    font-size: 35px;
     text-align: center;
 }
 
