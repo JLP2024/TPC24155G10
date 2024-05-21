@@ -52,6 +52,7 @@ background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   /* background-color: blue; */
   /* text-align: center; */
   /* overflow: auto; */
+  /* overflow: auto; */
 }
 .footer {
   grid-area: footer;
@@ -63,7 +64,7 @@ background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   gap: 10px;
   grid-template:
     "header" 100px
-    "navbar" 150px
+    "navbar" 100px
     "main" auto
     "sidebar" auto
     "footer" 100px;
@@ -226,4 +227,28 @@ iframe {
   justify-content: center;
   /* align-content: space-around; */
   text-align: center;
+}
+.banner-img {
+  width: 70%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: 150; /* Mantiene la proporción de la imagen */
+  transition: transform 0.5s ease-in-out; /* Efecto de transición suave */
+  margin: 4px;
+}
+.banner-img2 {
+  width: 90%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: 300; /* Mantiene la proporción de la imagen */
+  transition: transform 0.5s ease-in-out; /* Efecto de transición suave */
+  margin: 4px;
+}
+.sidebar-banner {
+  margin: 20px;
+}
+.banner-container {
+  /* display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  text-align: center; */
 }
