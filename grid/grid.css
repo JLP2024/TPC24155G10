@@ -25,21 +25,33 @@ body {
 }
 .header {
   grid-area: header;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-image: url(../gif/hea1.png);
+  background-size: cover; /* Cover the entire header with the background image */
+  background-position: center; /* Position the background image in the center */
+  height: 100px; /* Set a height for the header */
+  color: white; /* Set text color to white for better visibility */
+  text-align: center; /* Center align text content in the header */
+  padding: 20px;
   /* background-color: antiquewhite; */
 }
 .navbar {
   grid-area: navbar;
+
   /* background-color: aqua; */
 }
 .main {
   grid-area: main;
   /* background-color: aquamarine; */
 }
-.sidebar {
+.sidebar-form {
   grid-area: sidebar;
+
   /* background-color: blue; */
   /* text-align: center; */
-  overflow: auto;
+  /* overflow: auto; */
 }
 .footer {
   grid-area: footer;
@@ -51,9 +63,9 @@ body {
   gap: 10px;
   grid-template:
     "header" 100px
-    "navbar" 100px
+    "navbar" 220px
     "main" auto
-    "sidebar" 300px
+    "sidebar" auto
     "footer" 100px;
 }
 @media (min-width: 600px) {
@@ -71,8 +83,8 @@ body {
       "header  header" 100px
       "navbar  navbar" 100px
       "sidebar main" 300px auto
-      "footer  footer" 100px /
-      200px auto;
+      "footer  footer" 150 /
+      300px auto;
   }
 }
 @media (min-width: 900px) {
@@ -90,7 +102,7 @@ body {
       "header  header header" 100px
       "navbar  main sidebar" auto
       "footer  footer footer" 100px /
-      200px auto 300px;
+      150px auto 300px;
   }
 }
 img {
@@ -98,6 +110,17 @@ img {
   max-width: 300px;
   /* object-fit: cover;
   object-position: bottom; */
+}
+.img-head {
+  width: 100%;
+  height: 300px;
+  max-width: 300px;
+  margin: 0;
+
+  object-position: top;
+}
+.dark-mode-toggle-1 {
+  /* object-position: left; */
 }
 .tamaño50 {
   width: 50px;
@@ -174,12 +197,7 @@ textarea {
 textarea:hover {
   background-color: black;
 }
-form label {
-  width: 72px;
-  font-weight: bold;
-  display: inline-block;
-  /* padding: 8px; */
-}
+
 .centrado {
   text-align: center;
   /* font-size: 1.5rem;
@@ -208,7 +226,7 @@ nav ul li {
   padding: 6px;
   /* espacio de margen afuera del borde del elemento html segun el modelo de caja  */
   margin: 8px;
-  background-color: rgb(213, 198, 218);
+  background-color: #666666;
 }
 nav ul li a {
   /* quita el subrayado de los enlaces a  */
@@ -216,13 +234,43 @@ nav ul li a {
   /* familia de la fuente  */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+a {
+  color: white;
+}
+li {
+  width: 100px;
+}
 /* Pseudo Clase que cambia cuando el mouse esta encima del elemento  */
 li:hover {
-  background-color: rgb(247, 195, 131);
+  background-color: rgb(26, 25, 25);
   /* estilo de fuente en Negrita  */
   font-weight: bold;
 }
 /* Pseudo Clase que cambia cuando hacemos clic con el mouse encima del elemento  */
 a:active {
   color: rgb(255, 255, 255);
+}
+.banner-img {
+  width: 70%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: 150; /* Mantiene la proporción de la imagen */
+  transition: transform 0.5s ease-in-out; /* Efecto de transición suave */
+  margin: 4px;
+}
+.banner-img2 {
+  width: 90%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: 300; /* Mantiene la proporción de la imagen */
+  transition: transform 0.5s ease-in-out; /* Efecto de transición suave */
+  margin: 4px;
+}
+.sidebar-banner {
+  margin: 20px;
+}
+.banner-container {
+  /* display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  text-align: center; */
 }
