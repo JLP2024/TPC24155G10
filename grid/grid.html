@@ -10,95 +10,182 @@
       media="(prefers-color-scheme:light)"
       href="light.css"
     />
-    
+
     <link
       rel="stylesheet"
       media="(prefers-color-scheme:dark)"
       href="dark.css"
     />
     <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
-    
   </head>
   <body class="grid-container">
-    <header class="header">HEADER
-      <dark-mode-toggle
+    <header class="header">
+      <!-- <dark-mode-toggle
       id="dark-mode-toggle-1"
       legend="Theme Switcher"
       appearance="switch"
       dark="Dark"
       light="Light"
       remember="Activar modo en todas las paginas"
-    ></dark-mode-toggle>
+    ></dark-mode-toggle> -->
     </header>
-    <nav class="navbar">NAVBAR
+
+    <nav class="navbar">
       <ul>
-        <li><a href="#">Pag1</a></li>
-        <li><a href="#">Pag2</a></li>
-        <li><a href="#">Pag3</a></li>
-        <li><a href="#">Pag4</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="kids.html">Kids</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="grid.html">Contacto</a></li>
         <li><a href="#">Pag5</a></li>
+        <li><a href="#">Pag6</a></li>
+
         <li><a href="#">Pag6</a></li>
       </ul>
     </nav>
-    <aside class="sidebar">
+    <aside class="sidebar-form">
+      <dark-mode-toggle
+        id="dark-mode-toggle-1"
+        legend=""
+        appearance="switch"
+        dark="Dark"
+        light="Light"
+        remember="Activar"
+      ></dark-mode-toggle>
       <!-- SIDEBAR -->
-      <img src="../gif/banner2.gif" alt="" />
-      <img src="../gif/banner1.gif" alt="" />
-      <p>SIDEBAR</p>
+      <img class="sidebar-banner" src="../gif/banner1.gif" alt="" />
+      <img class="sidebar-banner" src="../gif/banner2.gif" alt="" />
+      <img class="sidebar-banner" src="../gif/banner3.gif" alt="" />
+      <img class="sidebar-banner" src="../gif/banner4.gif" alt="" />
+      <!-- <p>SIDEBAR</p> -->
     </aside>
     <article class="main">
-      <form action="https://formspree.io/f/mvoedben" target=""  enctype="multipart/form-data" method="POST" name="formDatosPersonales">
+      <img class="sidebar-banner" src="../gif/header3.gif" alt="" />
+      <br />
+      <img class="sidebar-banner" src="../gif/banner5.gif" alt="" />
+      <form
+        action="https://formspree.io/f/mvoedben"
+        enctype="multipart/form-data"
+        method="POST"
+        name="formDatosPersonales"
+        id="miFormulario"
+      >
+        <h1>Contacto</h1>
 
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
-      
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          placeholder="Escribe tu nombre"
+        />
+
         <label for="apellidos">Apellido</label>
-        <input type="text" name="apellidos" id="apellidos" placeholder=" Apellido"/>
-      
-        <label for="email" />Email</label>
-        <input type="email" name="email" id="email" placeholder="email"  />
+        <input
+          type="text"
+          name="apellidos"
+          id="apellidos"
+          placeholder=" Apellido"
+        />
 
-        <label for="masculino" >Masculino</label>
-        <input type="radio" name="sexo" id="masculino"/>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="email" />
 
-        <label for="femenino" >Femenino</label>
-        <input type="radio" name="sexo" id="femenino"/>
-      
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="sexo" id="masculino" />
+
+        <label for="femenino">Femenino</label>
+        <input type="radio" name="sexo" id="femenino" />
+
         <label for="asunto">Asunto</label>
-        <input type ="text" name="asunto" id="asunto" placeholder="Tu consulta"/>
-      
-        <label for="mensaje">Mensaje</label>
-        <textarea name="mensaje" for="mensaje" placeholder="describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+        <input
+          type="text"
+          name="asunto"
+          id="asunto"
+          placeholder="Tu consulta"
+        />
 
-        <input type="file" name="archivo" id="archivo">
+        <label>Mensaje</label>
+        <textarea
+          name="mensaje"
+          placeholder="describe brevemente en menos de 300 carácteres"
+          maxlength="300"
+          id="area"
+        ></textarea>
 
-        <label for="check1" >Suscribirme</label>
-        <input type="checkbox" name="check1" id="check1"/>
+        <input
+          type="file"
+          name="archivo"
+          id="archivo"
+          accept="image/png,image/jpeg"
+        />
 
-        
+        <label for="check1">Suscribirme</label>
+        <input type="checkbox" name="check1" id="check1" />
 
-        
-        <input type="submit" name="enviar" value="Enviar datos"/>
-        <input type="reset" name="borrar" value="Borrar Datos">
+        <input type="submit" name="enviar" value="Enviar datos" />
+        <input type="reset" name="borrar" value="Borrar Datos" />
       </form>
       <div class="flex-container">
         <div class="flex-box">
-          <h1><p class="centrado">COMO LLEGAR...🏃‍♂️</p></h1>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.9958185142686!2d-58.44575682485435!3d-34.62954595886178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca36866ca4b9%3A0xf3181e2c66910c9c!2sParque%20Chacabuco%2C%20Av.%20Directorio%201110%2C%20C1406GZN%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1713964998641!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <h1 class="centrado">COMO LLEGAR...🏃‍♂️</h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.9958185142686!2d-58.44575682485435!3d-34.62954595886178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca36866ca4b9%3A0xf3181e2c66910c9c!2sParque%20Chacabuco%2C%20Av.%20Directorio%201110%2C%20C1406GZN%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1713964998641!5m2!1ses-419!2sar"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
+      </div>
     </article>
     <footer class="footer">
-      FOOTER
-      <img class="tamaño50" src="../gif/medios.gif">
-            <img class="tamaño50" src="../gif/telefono.gif">
-            <img class="tamaño50" src="../gif/cuaderno.gif">
-            
-            <img class="tamaño50" src="../gif/hacer-clic.gif">
-           
-            <img class="tamaño50" src="../gif/mensaje.gif">
-            <img class="tamaño50" src="../gif/perfil.gif">
-            <img class="tamaño50" src="../gif/hogar.gif">
-           
+      <!-- FOOTER -->
+      <img class="tamaño50" src="../gif/medios.gif" />
+      <img class="tamaño50" src="../gif/social.png" />
+      <img class="tamaño50" src="../gif/instagram.png" />
+      <img class="tamaño50" src="../gif/facebook.png" />
+      <img class="tamaño50" src="../gif/gmail2.png" />
+      <img class="tamaño50" src="../gif/perfil.gif" />
+      <img class="tamaño50" src="../gif/hogar.gif" />
     </footer>
+    <script>
+      document.getElementById("miFormulario").onsubmit = function () {
+        var campo1 = document.getElementById("nombre").value;
+        var campo2 = document.getElementById("apellidos").value;
+        var campo3 = document.getElementById("email").value;
+        var campo4 = document.getElementById("asunto").value;
+        var campo5 = document.getElementById("area").value;
+
+        if (campo1 === "") {
+          alert("El nombre está vacío. Por favor, rellénalo antes de enviar.");
+          return false; // Esto evita que el formulario se envíe
+        }
+        if (campo2 === "") {
+          alert(
+            "El apellido está vacío. Por favor, rellénalo antes de enviar."
+          );
+          return false; // Esto evita que el formulario se envíe
+        }
+        if (campo3 === "") {
+          alert("El Email está vacío. Por favor, rellénalo antes de enviar.");
+          return false; // Esto evita que el formulario se envíe
+        }
+        if (campo4 === "") {
+          alert("El asunto está vacío. Por favor, rellénalo antes de enviar.");
+          return false; // Esto evita que el formulario se envíe
+        }
+        if (campo5 === "") {
+          alert(
+            "El campo mensaje está vacío. Por favor, rellénalo antes de enviar."
+          );
+          return false; // Esto evita que el formulario se envíe
+        }
+
+        return true; // Esto permite que el formulario se envíe
+      };
+    </script>
   </body>
 </html>
