@@ -25,12 +25,12 @@ function agregarMenu(){
         </a>
         <ul class="navbar-items submenu">
             <li class="navbar-item flexbox-left"><a class="navbar-item-inner flexbox link-texta"
-                    href="grid.html">Hombres</a></li>
+                    href="hombre.html">Hombres</a></li>
             <li class="navbar-item flexbox-left"><a class="navbar-item-inner flexbox link-texta"
-                    href="damaindex.html">Damas</a>
+                    href="dama.html">Damas</a>
             </li>
             <li class="navbar-item flexbox-left"><a class="navbar-item-inner flexbox link-texta"
-                    href="#">Niños</a>
+                    href="nino.html">Niños</a>
             </li>
         </ul>
     </li>

@@ -1,33 +1,33 @@
 /* Esta lista podría ser reemplazada por la respuesta de un backend */
 const nino = [
     {
-      id:1,
-      nombre: "Musculosa",
-      precio: 111111,
+      id:13,
+      nombre: "Conjunto Basquet",
+      precio: 78900,
     },
     {
-      id:2,
-      nombre: "Conjunto Tenis",
-      precio: 222222,
+      id:14,
+      nombre: "vestido Tenis",
+      precio: 62800,
     },
     {
-      id:3,
-      nombre: "Mochila",
-      precio: 333333,
+      id:15,
+      nombre: "Zandalias estampadas",
+      precio: 34900,
     },
     {
-      id:4,
-      nombre: "Zapatillas",
-      precio: 444444,
+      id:16,
+      nombre: "comjunto campera y calza",
+      precio: 84500,
     },
     {
-      id:5,
-      nombre: "Top Deportivo",
-      precio: 555555,
+      id:17,
+      nombre: "Maya Gimnasia",
+      precio: 55500,
     },
     {
-      id:6,
-      nombre: "Conjunto Remera y Calza",
-      precio: 666666,
+      id:18,
+      nombre: "Zapatillas cuero",
+      precio: 65700,
     }
   ]

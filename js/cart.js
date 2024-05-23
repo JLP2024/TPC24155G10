@@ -7,13 +7,13 @@ const totalesContainer = document.getElementById("totales");
 /** Crea las tarjetas de productos teniendo en cuenta lo guardado en localstorage */
 function crearTarjetasProductosCarrito() {
   contenedorTarjetas.innerHTML = "";
-  const productos = JSON.parse(localStorage.getItem("dama"));
+  const productos = JSON.parse(localStorage.getItem("carri"));
   if (productos && productos.length > 0) {
     productos.forEach((producto) => {
-      const nuevaDama = document.createElement("div");
-      nuevaDama.classList = "tarjeta-producto";
-      nuevaDama.innerHTML = `
-    <img src="./img/productos/${producto.id}.jpg" alt="Bicicleta 1">
+      const nuevaTarjeta = document.createElement("div");
+      nuevaTarjeta.classList = "tarjeta-producto";
+      nuevaTarjeta.innerHTML = `
+    <img src="./img/productos/${producto.id}.jpg" alt="producto">
     <h3>${producto.nombre}</h3>
     <span>$${producto.precio}</span>
     <div>
@@ -22,8 +22,8 @@ function crearTarjetasProductosCarrito() {
     <button>+</button>
     </div>
     `;
-      contenedorTarjetas.appendChild(nuevaDama);
-      nuevaDama
+      contenedorTarjetas.appendChild(nuevaTarjeta);
+      nuevaTarjeta
         .getElementsByTagName("button")[0]
         .addEventListener("click", (e) => {
           const cantidadElement = e.target.parentElement.getElementsByClassName("cantidad")[0];
@@ -31,7 +31,7 @@ function crearTarjetasProductosCarrito() {
           crearTarjetasProductosCarrito();
           actualizarTotales();
         });
-      nuevaDama
+      nuevaTarjeta
         .getElementsByTagName("button")[1]
         .addEventListener("click", (e) => {
           const cantidadElement = e.target.parentElement.getElementsByClassName("cantidad")[0];
@@ -45,11 +45,12 @@ function crearTarjetasProductosCarrito() {
   actualizarNumeroCarrito();
 }
 
+
 crearTarjetasProductosCarrito();
 
 /** Actualiza el total de precio y unidades de la página del carrito */
 function actualizarTotales() {
-  const productos = JSON.parse(localStorage.getItem("dama"));
+  const productos = JSON.parse(localStorage.getItem("carri"));
   let cantidad = 0;
   let precio = 0;
   if (productos && productos.length > 0) {
@@ -60,12 +61,11 @@ function actualizarTotales() {
   }
   cantidadElement.innerText = cantidad;
   precioElement.innerText = precio;
-  if(precio === 0) {
+  if (precio === 0) {
     reiniciarCarrito();
     revisarMensajeVacio();
   }
 }
-
 document.getElementById("reiniciar").addEventListener("click", () => {
   contenedorTarjetas.innerHTML = "";
   reiniciarCarrito();
@@ -74,7 +74,7 @@ document.getElementById("reiniciar").addEventListener("click", () => {
 
 /** Muestra o esconde el mensaje de que no hay nada en el carrito */
 function revisarMensajeVacio() {
-  const productos = JSON.parse(localStorage.getItem("dama"));
+  const productos = JSON.parse(localStorage.getItem("carri"));
   carritoVacioElement.classList.toggle("escondido", productos);
   totalesContainer.classList.toggle("escondido", !productos);
 }
