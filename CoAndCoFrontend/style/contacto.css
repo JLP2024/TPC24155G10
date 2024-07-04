@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/*:root {
+  color-scheme: light dark;
+}*/
+html {
+  height: 100%;
+}
+body {
+ /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;*/
+  min-height: 100%;
+  /*-----------Patron de Fondo------------*/
+font-family: "Advent Pro", sans-serif;
+background:
+radial-gradient(#727173 3px, transparent 4px),
+radial-gradient(#727173 3px, transparent 4px),
+linear-gradient(#a09ea1 4px, transparent 0),
+linear-gradient(45deg, transparent 74px, transparent 75px, #727173 75px, #727173 76px, transparent 77px, transparent 109px),
+linear-gradient(-45deg, transparent 75px, transparent 76px, #727173 76px, #727173 77px, transparent 78px, transparent 109px),
+#a09ea1;
+background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  /*background-color: var(--background-color);*/
+}
+
+.grid-container > * {
+  /*box-shadow: -1px 1px 7px 0px rgb(29, 1, 1);*/
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+.header {
+  display:none;
+  grid-area: header;
+  position:static;
+  top: 0;
+  width: 100%;
+  /* background-color: antiquewhite; */
+}
+.main {
+  grid-area: main;
+  /* background-color: aquamarine; */
+}
+.sidebar-form {
+  grid-area: sidebar;
+
+  /* background-color: blue; */
+  /* text-align: center; */
+  /* overflow: auto; */
+  /* overflow: auto; */
+}
+.footer {
+  grid-area: footer;
+  /* background-color: brown; */
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header" 100px
+    "navbar" 100px
+    "main" auto
+    "sidebar" auto
+    "footer" 100px;
+}
+@media (min-width: 600px) {
+  .grid-container {
+    /* background-color: blue; */
+    /* grid-template-areas:
+      "header  header"
+      "navbar  navbar"
+      "sidebar main"
+      "footer  footer";
+    grid-template-columns: 200px auto;
+    grid-template-rows: 100px 50px auto 100px; */
+
+    grid-template:
+      "header  header" 100px
+      "navbar  navbar" 100px
+      "sidebar main" 300px auto
+      "footer  footer" 150 /
+      300px auto;
+  }
+}
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "header  header header" 100px
+      "navbar  main sidebar" auto
+      "footer  footer footer" 100px /
+      150px auto 300px;
+  }
+}
+img {
+  width: 100%;
+  max-width: 300px;
+  /* object-fit: cover;
+  object-position: bottom; */
+}
+
+.tamaño50 {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+form {
+  width: 350px;
+  padding: 16px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: rgb(61, 57, 57);
+ color: antiquewhite;
+}
+
+form label {
+  width: 72px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 3px;
+  margin: 12px;
+}
+
+form input[type="date"] {
+  padding: 10px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="checkbox"],
+form input[type="radio"] {
+  width: 180px;
+  padding: 3px 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.192);
+  margin: 10px 0;
+  display: inline-block;
+}
+
+form input[type="text"],
+form input[type="email"],:active{
+color: #fff;
+}
+
+form input[type="text"]:hover {
+  background-color: black;
+}
+
+form input[type="email"]:hover {
+  background-color: black;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+  width: 100%;
+  padding: 8px 16px;
+  margin-top: 32px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  display: block;
+  color: #fff;
+  background-color: #000;
+}
+
+form input[type="submit"],
+form input[type="reset"]:hover {
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color:rgba(0, 0, 0, 0.192);
+  margin: 8px 0;
+  /*resize: vertical | horizontal | none | both*/
+  resize: none;
+  display: block;
+}
+
+ textarea,:active{
+  color: #f6f6f6;
+ } 
+textarea:hover {
+  background-color: black;
+}
+
+.centrado {
+  text-align: center;
+  /* font-size: 1.5rem;
+    color: rgb(179, 17, 219); */
+}
+
+iframe {
+  padding: 10px;
+}
+
+.banner-img {
+  width: 70%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: 150; /* Mantiene la proporción de la imagen */
+  transition: transform 0.5s ease-in-out; /* Efecto de transición suave */
+  margin: 4px;
+}
+
+.sidebar-banner {
+  margin: 5px;
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-content: space-around; */
+  text-align: center;
+}
+.banner-img {
+  width: 70%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: 150; /* Mantiene la proporción de la imagen */
+  transition: transform 0.5s ease-in-out; /* Efecto de transición suave */
+  margin: 4px;
+}
+.banner-img2 {
+  width: 90%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: 300; /* Mantiene la proporción de la imagen */
+  transition: transform 0.5s ease-in-out; /* Efecto de transición suave */
+  margin: 4px;
+}
+.sidebar-banner {
+  margin: 20px;
+}
+

@@ -1,0 +1,14 @@
+Flask 
+pymysql
+flask-cors   
+MySQL
+flask_mysqldb
+flask_sqlalchemy
+flask_marshmallow
+
+Entorno Virtual
+ jlp
+
+Base  de Datos
+
+coandco
